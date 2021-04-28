@@ -291,7 +291,6 @@ class Menu_Icons_OBFX_Module extends Orbit_Fox_Module_Abstract {
 			$path      = str_replace( '\\', '/', $reflector->getFileName() );
 
 			$name = '';
-			$type = '';
 			if ( false !== strpos( $path, 'themes' ) ) {
 				$type  = __( 'theme', 'themeisle-companion' );
 				$theme = wp_get_theme();
@@ -301,7 +300,7 @@ class Menu_Icons_OBFX_Module extends Orbit_Fox_Module_Abstract {
 				$path = explode( DIRECTORY_SEPARATOR, isset( $path[1] ) ? $path[1] : '' );
 				$path = array_values( array_filter( $path ) );
 				if ( isset( $path[0] ) ) {
-					$name = '&nbsp; <b>' . esc_attr( $path[0] ) . '</b>';
+					$name = '&nbsp; <b>' . wp_kses_post( $path[0] ) . '</b>';
 				}
 				$type = __( 'plugin', 'themeisle-companion' );
 			}

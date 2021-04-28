@@ -48,7 +48,6 @@ class Policy_Notice_OBFX_Module extends Orbit_Fox_Module_Abstract {
 	 * @return mixed
 	 */
 	public function load() {
-		return;
 	}
 
 	/**
@@ -192,11 +191,11 @@ class Policy_Notice_OBFX_Module extends Orbit_Fox_Module_Abstract {
 		// combine the buttons with the bar and close the wrapper.
 		$output               .= '<span class="obfx-cookie-bar">' . $policy_text . $buttons . '</span></div>';
 		$allowed_html          = wp_kses_allowed_html( 'post' );
-		$allowed_html['input'] = [
-			'class' => [],
-			'id'    => [],
-			'type'  => [],
-		];
+		$allowed_html['input'] = array(
+			'class' => array(),
+			'id'    => array(),
+			'type'  => array(),
+        );
 
 		echo wp_kses( apply_filters( 'obfx_cookie_notice_output', $output, $options ), $allowed_html );
 	}

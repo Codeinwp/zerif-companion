@@ -600,9 +600,9 @@ abstract class Orbit_Fox_Module_Abstract {
 						);
 					}
 					$order ++;
-				}// End foreach().
-			}// End if().
-		}// End if().
+				}
+			}
+		}
 	}
 
 	/**
@@ -729,7 +729,7 @@ abstract class Orbit_Fox_Module_Abstract {
 		if ( ! empty( $luck ) ) {
 			return $luck === 'yes';
 		}
-		$luck = rand( 1, 100 );
+		$luck = wp_rand( 1, 100 );
 
 		$luck = $luck <= $percent;
 		update_option( 'obfx_beta_show_' . $this->get_slug(), $luck ? 'yes' : 'no' );

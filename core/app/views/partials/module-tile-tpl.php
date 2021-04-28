@@ -61,15 +61,14 @@ $noance = wp_create_nonce( 'obfx_activate_mod_' . $slug );
 	<div class="tile-action">
 		<div class="form-group">
 			<label class="form-switch <?php echo empty( $checked ) ? '' : 'activated'; ?>">
-				<input class="<?php echo esc_attr( $toggle_class ); ?>" type="checkbox" name="<?php echo esc_attr( $slug ); ?>"
-					   value="<?php echo esc_attr( $noance ); ?>" <?php echo esc_attr( $checked ); ?> >
+				<input class="<?php echo esc_attr( $toggle_class ); ?>" type="checkbox" name="<?php echo esc_attr( $slug ); ?>" value="<?php echo esc_attr( $noance ); ?>" <?php echo esc_attr( $checked ); ?> >
 				<i class="form-icon"></i>
-				<span class="inactive"><?php esc_attr_e( 'Activate', 'themeisle-companion' ); ?></span>
+				<span class="inactive"><?php echo esc_html__( 'Activate', 'themeisle-companion' ); ?></span>
 				<i class="dashicons dashicons-yes"></i>
 
 			</label>
 			<?php if ( $beta ) { ?>
-				<p class="obfx-beta-module"><?php esc_attr_e( 'Beta module', 'themeisle-companion' ); ?></p>
+				<p class="obfx-beta-module"><?php echo esc_html__( 'Beta module', 'themeisle-companion' ); ?></p>
 			<?php } ?>
 			<?php
 			if ( ! empty( $modal ) ) {

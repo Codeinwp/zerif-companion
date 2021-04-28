@@ -16,7 +16,7 @@ echo '.fl-node-' . esc_attr( $id ) . '.obfx-pricing-header{';
 	echo ! empty( $padding_left ) ? 'padding-left: ' . esc_attr( $padding_left ) . 'px;' : '';
 	echo ! empty( $padding_right ) ? 'padding-right: ' . esc_attr( $padding_right ) . 'px;' : '';
 
-	$type = $settings->bg_type; //phpcs:ignore WordPress.WP.GlobalVariablesOverride.OverrideProhibited
+	$type = $settings->bg_type; //phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 switch ( $type ) {
 	case 'color':
 		$bg_color = ! empty( $settings->header_bg_color ) ? $settings->header_bg_color : '';
@@ -42,22 +42,22 @@ switch ( $type ) {
 			case 'vertical':
 				$pos1 = 'top';
 				$pos2 = 'to bottom';
-				$type = 'linear-gradient'; //phpcs:ignore WordPress.WP.GlobalVariablesOverride.OverrideProhibited
+				$type = 'linear-gradient'; //phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 				break;
 			case 'diagonal_bottom':
 				$pos1 = '-45deg';
 				$pos2 = '135deg';
-				$type = 'linear-gradient'; //phpcs:ignore WordPress.WP.GlobalVariablesOverride.OverrideProhibited
+				$type = 'linear-gradient'; //phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 				break;
 			case 'diagonal_top':
 				$pos1 = '45deg';
 				$pos2 = '45deg';
-				$type = 'linear-gradient'; //phpcs:ignore WordPress.WP.GlobalVariablesOverride.OverrideProhibited
+				$type = 'linear-gradient'; //phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 				break;
 			case 'radial':
 				$pos1 = 'center, ellipse cover';
 				$pos2 = 'ellipse at center';
-				$type = 'radial-gradient'; //phpcs:ignore WordPress.WP.GlobalVariablesOverride.OverrideProhibited
+				$type = 'radial-gradient'; //phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 				break;
 		}
 

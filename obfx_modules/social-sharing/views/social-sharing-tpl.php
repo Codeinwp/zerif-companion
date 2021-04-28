@@ -41,7 +41,7 @@ if ( ! empty( $social_links_array ) ) { ?>
 					// phpcs:ignore WordPress.PHP.StrictComparisons.LooseComparison
 					echo ( isset( $network_data['target'] ) && $network_data['target'] != '0' ) ? 'target="_blank"' : '';
 					?>
-					 href="<?php echo esc_url( $network_data['link'] ); ?>">
+					href="<?php echo esc_url( $network_data['link'] ); ?>">
 					<i class="socicon-<?php echo esc_attr( $network_data['icon'] ); ?>"></i>
 					<?php
 					if ( $show_name ) {
@@ -53,4 +53,4 @@ if ( ! empty( $social_links_array ) ) { ?>
 		<?php } ?>
 	</ul>
 	<?php
-}// End if().
+}

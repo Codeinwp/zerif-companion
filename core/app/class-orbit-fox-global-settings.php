@@ -76,7 +76,7 @@ class Orbit_Fox_Global_Settings {
 					'custom-fonts',
 				)
 			);
-		}// End if().
+		}
 
 		return self::$instance;
 	}

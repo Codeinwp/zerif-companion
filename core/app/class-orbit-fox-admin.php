@@ -107,9 +107,9 @@ class Orbit_Fox_Admin {
 		}
 		if ( in_array( $screen->id, array( 'toplevel_page_obfx_companion' ), true ) ) {
 			wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . '../assets/js/orbit-fox-admin.js', array( 'jquery' ), $this->version, false );
-			
+
 			wp_register_script( 'obfx-plugin-install', plugin_dir_url( __FILE__ ) . '../assets/js/plugin-install.js', array( 'jquery' ), $this->version, true );
-			
+
 			wp_localize_script(
 				'obfx-plugin-install',
 				'obfxPluginInstall',
@@ -118,11 +118,11 @@ class Orbit_Fox_Admin {
 					'installing' => esc_html__( 'Installing ... ', 'themeisle-companion' ),
 				)
 			);
-			
+
 			wp_enqueue_script( 'plugin-install' );
 			wp_enqueue_script( 'updates' );
 			wp_enqueue_script( 'obfx-plugin-install' );
-			
+
 		}
 		do_action( 'obfx_admin_enqueue_scripts' );
 	}
@@ -171,8 +171,7 @@ class Orbit_Fox_Admin {
 					echo sprintf( esc_attr__( 'You have activated Orbit Fox plugin! Go to the %s to get started with the extra features.', 'themeisle-companion' ), sprintf( '<a href="%s">%s</a>', esc_url( add_query_arg( 'obfx_ignore_visit_dashboard_notice', '0', admin_url( 'admin.php?page=obfx_companion' ) ) ), esc_attr__( 'Dashboard Page', 'themeisle-companion' ) ) );
 				?>
 					</p>
-				<a href="<?php echo esc_url( add_query_arg( 'obfx_ignore_visit_dashboard_notice', '0', admin_url( 'admin.php?page=obfx_companion' ) ) ); ?>"
-				   class="notice-dismiss" style="text-decoration: none;">
+				<a href="<?php echo esc_url( add_query_arg( 'obfx_ignore_visit_dashboard_notice', '0', admin_url( 'admin.php?page=obfx_companion' ) ) ); ?>" class="notice-dismiss" style="text-decoration: none;">
 					<span class="screen-reader-text">Dismiss this notice.</span>
 				</a>
 			</div>
@@ -224,7 +223,7 @@ class Orbit_Fox_Admin {
 		if ( isset( $data['noance'] ) && wp_verify_nonce( $data['noance'], 'obfx_update_module_options_' . $data['module-slug'] ) ) {
 			$response = $this->try_module_save( $data );
 		}
-		echo json_encode( $response );
+		echo wp_json_encode( $response );
 		wp_die();
 	}
 
@@ -266,19 +265,19 @@ class Orbit_Fox_Admin {
 	 * Define render function for recommended tab.
 	 */
 	public function load_recommended_plugins() {
-		$plugins = [
+		$plugins = array(
 			'optimole-wp',
 			'feedzy-rss-feeds',
 			'wpforms-lite',
 			'translatepress-multilingual',
 			'autoptimize',
 			'wordpress-seo',
-		];
+        );
 		shuffle( $plugins );
 		echo sprintf( '<div class="obfx-recommended-title-wrapper"><span class="obfx-recommended-title"><span class="dashicons dashicons-megaphone"></span> &nbsp; %s</span><div class="clearfix"></div></div>', 'Orbit Fox recommends' );
-		
+
 		$install_instance = new Orbit_Fox_Plugin_Install();
-		
+
 		foreach ( $plugins as $plugin ) {
 			$current_plugin = $install_instance->call_plugin_api( $plugin );
 			if ( ! isset( $current_plugin->name ) ) {
@@ -288,7 +287,7 @@ class Orbit_Fox_Admin {
 			$name   = $current_plugin->name;
 			$desc   = $current_plugin->short_description;
 			$button = $install_instance->get_button_html( $plugin );
-			
+
 			echo '<div class="tile obfx-recommended ">';
 			echo '<div class="tile-icon">';
 			echo '<div class="obfx-icon-recommended">';
@@ -311,7 +310,7 @@ class Orbit_Fox_Admin {
 
 	}
 
-	
+
 
 	/**
 	 * This method is called via AJAX and processes the
@@ -330,7 +329,7 @@ class Orbit_Fox_Admin {
 		if ( isset( $data['noance'] ) && wp_verify_nonce( $data['noance'], 'obfx_activate_mod_' . $data['name'] ) ) {
 			$response = $this->try_module_activate( $data );
 		}
-		echo json_encode( $response );
+		echo wp_json_encode( $response );
 		wp_die();
 	}
 
@@ -468,8 +467,8 @@ class Orbit_Fox_Admin {
 						)
 					);
 				}
-			}// End if().
-		}// End foreach().
+			}
+		}
 
 		$no_modules = false;
 		$empty_tpl  = '';

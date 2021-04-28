@@ -88,40 +88,28 @@ class Orbit_Fox_Render_Helper {
 		switch ( $option['type'] ) {
 			case 'text':
 				return $this->field_text( $option );
-				break;
 			case 'email':
 				return $this->field_text( $option, true );
-				break;
 			case 'textarea':
 				return $this->field_textarea( $option );
-				break;
 			case 'select':
 				return $this->field_select( $option );
-				break;
 			case 'radio':
 				return $this->field_radio( $option );
-				break;
 			case 'checkbox':
 				return $this->field_checkbox( $option );
-				break;
 			case 'toggle':
 				return $this->field_toggle( $option );
-				break;
 			case 'title':
 				return $this->field_title( $option );
-				break;
 			case 'custom':
 				return apply_filters( 'obfx_custom_control_' . $option['id'], '' );
-				break;
 			case 'link':
 				return $this->field_link( $option );
-				break;
 			case 'password':
 				return $this->field_password( $option );
-				break;
 			default:
-				return __( 'No option found for provided type', 'themeisle-companion' );
-				break;
+				return esc_html__( 'No option found for provided type', 'themeisle-companion' );
 		}
 
 	}
@@ -454,10 +442,7 @@ class Orbit_Fox_Render_Helper {
 		if ( ! isset( $option['target'] ) ) {
 			$option['target'] = '';
 		}
-		$field = '
-			<a id="' . esc_attr( $option['link-id'] ) . '" target="' . esc_attr( $option['target'] ) . '" class="' . esc_attr( isset( $option['link-class'] ) ? $option['link-class'] : '' ) . '" href="' . esc_url( $option['url'] ) . '">' .
-				 wp_kses_post( $option['text'] )
-				 . '</a>';
+		$field = '<a id="' . esc_attr( $option['link-id'] ) . '" target="' . esc_attr( $option['target'] ) . '" class="' . esc_attr( isset( $option['link-class'] ) ? $option['link-class'] : '' ) . '" href="' . esc_url( $option['url'] ) . '">' . wp_kses_post( $option['text'] ) . '</a>';
 
 		$field = $this->wrap_element( $option, $field );
 

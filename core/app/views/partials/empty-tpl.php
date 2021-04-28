@@ -11,7 +11,7 @@
  */
 
 if ( ! isset( $title ) ) {
-	$title = __( 'There are no modules for the Fox!', 'themeisle-companion' ); //phpcs:ignore WordPress.WP.GlobalVariablesOverride.OverrideProhibited
+	$title = __( 'There are no modules for the Fox!', 'themeisle-companion' ); //phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 }
 
 if ( ! isset( $btn_text ) ) {

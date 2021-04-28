@@ -136,11 +136,14 @@ class Orbit_Fox_Neve_Dropin {
 
 			</p>
 			<p>
-				<a href="<?php echo esc_url( admin_url( 'theme-install.php?theme=neve' ) ); ?>" target="_blank"
-				   class="button neve-upsell-try button-primary"><span class="dashicons dashicons-external"></span>Get
-					started</a></p>
-			<a href="<?php echo esc_url( wp_nonce_url( add_query_arg( array( self::$dismiss_key => 'yes' ) ), 'remove_upsell_confirmation', 'remove_upsell' ) ); ?>"
-			   class=" notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></a>
+				<a href="<?php echo esc_url( admin_url( 'theme-install.php?theme=neve' ) ); ?>" target="_blank" class="button neve-upsell-try button-primary">
+					<span class="dashicons dashicons-external"></span>
+					Get started
+				</a>
+			</p>
+			<a href="<?php echo esc_url( wp_nonce_url( add_query_arg( array( self::$dismiss_key => 'yes' ) ), 'remove_upsell_confirmation', 'remove_upsell' ) ); ?>" class=" notice-dismiss">
+				<span class="screen-reader-text">Dismiss this notice.</span>
+			</a>
 		</div>
 		<?php
 	}

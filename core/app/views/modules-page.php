@@ -42,7 +42,7 @@ if ( isset( $_GET['show_plugins'] ) && $_GET['show_plugins'] === 'yes' ) {
 <div class="obfx-wrapper obfx-header">
 	<div class="obfx-header-content">
 		<img src="<?php echo esc_url( OBFX_URL ); ?>/images/orbit-fox.png" title="Orbit Fox" class="obfx-logo"/>
-		<h1><?php esc_attr_e( 'Orbit Fox', 'themeisle-companion' ); ?></h1><span class="powered"> by <a
+		<h1><?php echo esc_html__( 'Orbit Fox', 'themeisle-companion' ); ?></h1><span class="powered"> by <a
 					href="https://themeisle.com" target="_blank"><b>ThemeIsle</b></a></span>
 	</div>
 </div>
@@ -67,9 +67,9 @@ if ( isset( $_GET['show_plugins'] ) && $_GET['show_plugins'] === 'yes' ) {
 										<?php
 										echo esc_url( admin_url( 'admin.php?page=obfx_companion' ) );
 										?>
-										"><?php echo esc_attr__( 'Available Modules', 'themeisle-companion' ); ?></a></li>
+										"><?php echo esc_html__( 'Available Modules', 'themeisle-companion' ); ?></a></li>
 							<li class="<?php echo $current_tab === 'plugins' ? 'obfx-tab-active' : ''; ?>">
-								<a href="<?php echo esc_url( admin_url( 'admin.php?page=obfx_companion&show_plugins=yes' ) ); ?>"><?php echo esc_attr__( 'Recommended Plugins', 'themeisle-companion' ); ?></a>
+								<a href="<?php echo esc_url( admin_url( 'admin.php?page=obfx_companion&show_plugins=yes' ) ); ?>"><?php echo esc_html__( 'Recommended Plugins', 'themeisle-companion' ); ?></a>
 							</li>
 						</ul>
 					</div>
@@ -89,9 +89,9 @@ if ( isset( $_GET['show_plugins'] ) && $_GET['show_plugins'] === 'yes' ) {
 			</div>
 			<div class="panel" <?php echo $current_tab === 'plugins' ? 'style="display:none"' : ''; ?>>
 				<div class="panel-header text-center">
-					<div class="panel-title mt-10"><?php echo esc_attr( 'Activated Modules Options', 'themeisle-companion' ); ?></div>
+					<div class="panel-title mt-10"><?php echo esc_html__( 'Activated Modules Options', 'themeisle-companion' ); ?></div>
 				</div>
-				<?php echo ( $panels === '' ) ? '<p class="text-center">' . esc_attr__( 'No modules activated.', 'themeisle-companion' ) . '</p>' : ( $panels ); //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+				<?php echo ( $panels === '' ) ? '<p class="text-center">' . esc_html__( 'No modules activated.', 'themeisle-companion' ) . '</p>' : ( $panels ); //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			</div>
 			<?php
 		}

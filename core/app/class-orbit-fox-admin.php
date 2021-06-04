@@ -107,9 +107,9 @@ class Orbit_Fox_Admin {
 		}
 		if ( in_array( $screen->id, array( 'toplevel_page_obfx_companion' ), true ) ) {
 			wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . '../assets/js/orbit-fox-admin.js', array( 'jquery' ), $this->version, false );
-			
+
 			wp_register_script( 'obfx-plugin-install', plugin_dir_url( __FILE__ ) . '../assets/js/plugin-install.js', array( 'jquery' ), $this->version, true );
-			
+
 			wp_localize_script(
 				'obfx-plugin-install',
 				'obfxPluginInstall',
@@ -118,11 +118,11 @@ class Orbit_Fox_Admin {
 					'installing' => esc_html__( 'Installing ... ', 'themeisle-companion' ),
 				)
 			);
-			
+
 			wp_enqueue_script( 'plugin-install' );
 			wp_enqueue_script( 'updates' );
 			wp_enqueue_script( 'obfx-plugin-install' );
-			
+
 		}
 		do_action( 'obfx_admin_enqueue_scripts' );
 	}
@@ -272,13 +272,14 @@ class Orbit_Fox_Admin {
 			'wpforms-lite',
 			'translatepress-multilingual',
 			'autoptimize',
+			'wp-cloudflare-page-cache',
 			'wordpress-seo',
 		];
 		shuffle( $plugins );
 		echo sprintf( '<div class="obfx-recommended-title-wrapper"><span class="obfx-recommended-title"><span class="dashicons dashicons-megaphone"></span> &nbsp; %s</span><div class="clearfix"></div></div>', 'Orbit Fox recommends' );
-		
+
 		$install_instance = new Orbit_Fox_Plugin_Install();
-		
+
 		foreach ( $plugins as $plugin ) {
 			$current_plugin = $install_instance->call_plugin_api( $plugin );
 			if ( ! isset( $current_plugin->name ) ) {
@@ -288,7 +289,7 @@ class Orbit_Fox_Admin {
 			$name   = $current_plugin->name;
 			$desc   = $current_plugin->short_description;
 			$button = $install_instance->get_button_html( $plugin );
-			
+
 			echo '<div class="tile obfx-recommended ">';
 			echo '<div class="tile-icon">';
 			echo '<div class="obfx-icon-recommended">';
@@ -311,7 +312,7 @@ class Orbit_Fox_Admin {
 
 	}
 
-	
+
 
 	/**
 	 * This method is called via AJAX and processes the

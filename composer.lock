@@ -78,12 +78,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeinwp/elementor-extra-widgets.git",
-                "reference": "3118143a39b0dcc5b09934508b7e555a44da1fe9"
+                "reference": "0a07707899c315f6eb13ee6f3110e3167f2b3fde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeinwp/elementor-extra-widgets/zipball/3118143a39b0dcc5b09934508b7e555a44da1fe9",
-                "reference": "3118143a39b0dcc5b09934508b7e555a44da1fe9",
+                "url": "https://api.github.com/repos/Codeinwp/elementor-extra-widgets/zipball/0a07707899c315f6eb13ee6f3110e3167f2b3fde",
+                "reference": "0a07707899c315f6eb13ee6f3110e3167f2b3fde",
                 "shasum": ""
             },
             "default-branch": true,
@@ -109,7 +109,7 @@
                 "issues": "https://github.com/Codeinwp/elementor-extra-widgets/issues",
                 "source": "https://github.com/Codeinwp/elementor-extra-widgets/tree/master"
             },
-            "time": "2021-05-31T13:36:02+00:00"
+            "time": "2021-07-15T09:45:31+00:00"
         },
         {
             "name": "codeinwp/full-width-page-templates",
@@ -153,16 +153,16 @@
         },
         {
             "name": "codeinwp/gutenberg-blocks",
-            "version": "1.6.7",
+            "version": "1.6.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeinwp/gutenberg-blocks.git",
-                "reference": "96b8d33c030ed7e907b14a488d107a333872d5ea"
+                "reference": "c58fc700fe616d8b4f6029c109a869257d6daeed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeinwp/gutenberg-blocks/zipball/96b8d33c030ed7e907b14a488d107a333872d5ea",
-                "reference": "96b8d33c030ed7e907b14a488d107a333872d5ea",
+                "url": "https://api.github.com/repos/Codeinwp/gutenberg-blocks/zipball/c58fc700fe616d8b4f6029c109a869257d6daeed",
+                "reference": "c58fc700fe616d8b4f6029c109a869257d6daeed",
                 "shasum": ""
             },
             "require": {
@@ -196,9 +196,9 @@
             "homepage": "https://github.com/Codeinwp/gutenberg-blocks",
             "support": {
                 "issues": "https://github.com/Codeinwp/gutenberg-blocks/issues",
-                "source": "https://github.com/Codeinwp/gutenberg-blocks/tree/v1.6.7"
+                "source": "https://github.com/Codeinwp/gutenberg-blocks/tree/v1.6.9"
             },
-            "time": "2021-05-24T09:31:55+00:00"
+            "time": "2021-07-02T20:24:47+00:00"
         },
         {
             "name": "codeinwp/templates-directory",
@@ -249,12 +249,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeinwp/themeisle-content-forms.git",
-                "reference": "87e971faf623591598581dc2ef14ff2c46af5009"
+                "reference": "cc2ec785e86510217cf9a18d2a0542b337b42a80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeinwp/themeisle-content-forms/zipball/87e971faf623591598581dc2ef14ff2c46af5009",
-                "reference": "87e971faf623591598581dc2ef14ff2c46af5009",
+                "url": "https://api.github.com/repos/Codeinwp/themeisle-content-forms/zipball/cc2ec785e86510217cf9a18d2a0542b337b42a80",
+                "reference": "cc2ec785e86510217cf9a18d2a0542b337b42a80",
                 "shasum": ""
             },
             "require": {
@@ -288,20 +288,20 @@
                 "issues": "https://github.com/Codeinwp/themeisle-content-forms/issues",
                 "source": "https://github.com/Codeinwp/themeisle-content-forms/tree/master"
             },
-            "time": "2021-05-31T14:54:15+00:00"
+            "time": "2021-07-15T09:44:09+00:00"
         },
         {
             "name": "codeinwp/themeisle-sdk",
-            "version": "3.2.20",
+            "version": "3.2.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeinwp/themeisle-sdk.git",
-                "reference": "aeef3f159c1b35451d87672b6984ccde36c0d21d"
+                "reference": "cafd016b61ec0928c0234e312046782a77c14318"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeinwp/themeisle-sdk/zipball/aeef3f159c1b35451d87672b6984ccde36c0d21d",
-                "reference": "aeef3f159c1b35451d87672b6984ccde36c0d21d",
+                "url": "https://api.github.com/repos/Codeinwp/themeisle-sdk/zipball/cafd016b61ec0928c0234e312046782a77c14318",
+                "reference": "cafd016b61ec0928c0234e312046782a77c14318",
                 "shasum": ""
             },
             "require-dev": {
@@ -326,9 +326,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Codeinwp/themeisle-sdk/issues",
-                "source": "https://github.com/Codeinwp/themeisle-sdk/tree/v3.2.20"
+                "source": "https://github.com/Codeinwp/themeisle-sdk/tree/v3.2.21"
             },
-            "time": "2021-03-30T09:16:29+00:00"
+            "time": "2021-06-30T10:55:18+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -457,16 +457,16 @@
         },
         {
             "name": "masterminds/html5",
-            "version": "2.7.4",
+            "version": "2.7.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Masterminds/html5-php.git",
-                "reference": "9227822783c75406cfe400984b2f095cdf03d417"
+                "reference": "f640ac1bdddff06ea333a920c95bbad8872429ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/9227822783c75406cfe400984b2f095cdf03d417",
-                "reference": "9227822783c75406cfe400984b2f095cdf03d417",
+                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/f640ac1bdddff06ea333a920c95bbad8872429ab",
+                "reference": "f640ac1bdddff06ea333a920c95bbad8872429ab",
                 "shasum": ""
             },
             "require": {
@@ -476,7 +476,7 @@
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.35"
+                "phpunit/phpunit": "^4.8.35 || ^5.7.21 || ^6 || ^7"
             },
             "type": "library",
             "extra": {
@@ -520,9 +520,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Masterminds/html5-php/issues",
-                "source": "https://github.com/Masterminds/html5-php/tree/2.7.4"
+                "source": "https://github.com/Masterminds/html5-php/tree/2.7.5"
             },
-            "time": "2020-10-01T13:52:52+00:00"
+            "time": "2021-07-01T14:25:37+00:00"
         },
         {
             "name": "php-http/curl-client",
